@@ -6,6 +6,7 @@
  <uses-feature android:name="android.hardware.telephony" android:required="true"/>
  <application android:label="热线重拨助手" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false">
   <activity android:name=".MainActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+   <intent-filter><action android:name="android.intent.action.DIAL"/><category android:name="android.intent.category.DEFAULT"/></intent-filter>
    <intent-filter><action android:name="android.intent.action.DIAL"/><category android:name="android.intent.category.DEFAULT"/><data android:scheme="tel"/></intent-filter>
   </activity>
   <activity android:name=".CallActivity" android:exported="false" android:showWhenLocked="true"/>
