@@ -37,7 +37,7 @@ class RedialService: Service() {
      "disconnected" -> {
       dialPending=false
       val reason=intent.getIntExtra("reason",-1)
-      if(!connected && (reason==DisconnectCause.BUSY || reason==DisconnectCause.CONGESTION || reason==DisconnectCause.ERROR || reason==DisconnectCause.OTHER)) retry()
+      if(!connected && (reason==DisconnectCause.BUSY || reason==DisconnectCause.ERROR || reason==DisconnectCause.OTHER)) retry()
       else finish("呼叫结束（原因码 $reason），已停止")
      }
     }
